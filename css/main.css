@@ -77,6 +77,97 @@ body {
     margin-bottom: .5rem;
 }
 
+.battery__percentage {
+    font-size: var(--biggest-font-size);
+}
+
+.battery__status {
+    position: absolute;
+    bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: var(--smaller-font-size);
+}
+
+.battery__status i {
+    font-size: 1.25rem;
+}
+
+.battery__pill {
+    position: relative;
+    width: 80px;
+    height: 180px;
+    background-color: var(--container-color);
+    box-shadow: inset 20px 0 48px hsl(0, 0%, 16%),
+                inset -4px 12px 48px hsl(0, 0%, 56%);
+    border-radius: 1rem;
+    justify-self: flex-end;
+}
+
+.battery__level {
+    position: absolute;
+    inset: 2px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+/* 
+.battery__liquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: var(--gradient-color-red);
+    box-shadow: inset -10px 0 12px hsla(0, 0%, 0%, .1),
+                inset 12px 0 12px hsla(0, 0%, 0%, .15);
+    transition: .3s;
+}
+
+.battery__liquid::after {
+    content: "";
+    position: absolute;
+    height: 8px;
+    background: var(--gradient-color-red);
+    box-shadow: inset 0 -3px 6px hsla(0, 0%, 0%, .2);
+    left: 0; 
+    right: 0;
+    margin: 0 auto;
+    top: -4px;
+    border-radius: 50%;
+} */
+
+.wave {
+    opacity: .4;
+    position: absolute;
+    bottom: -90%;
+    left: 0;
+    right: 0;
+    background: orange;
+    box-shadow: inset 0 -3px 6px hsla(0, 0%, 0%, .2);
+    width: 200px;
+    height: 200px;
+    transform-origin: 50% 48%;
+    border-radius: 35%;
+    margin-left: -62px;
+    margin-top: -250px;
+}
+
+.wave1 {
+    animation: 8s ease-out drift;
+    opacity: .9;
+}
+
+.wave2 {
+    animation: 10s ease-in reverse drift;
+    bottom: -86%;
+    opacity: .4;
+}
+
+@keyframes drift {
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
 /* Full battery icon color */
 
 
